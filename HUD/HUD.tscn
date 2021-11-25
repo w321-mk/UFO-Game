@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://data/RobotoCondensed-Bold.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+outline_color = Color( 1, 1, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+outline_color = Color( 1, 1, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="HUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+margin_left = 20.0
+margin_top = 20.0
+
+[node name="CountLabel" type="Label" parent="CanvasLayer/HBoxContainer"]
+margin_right = 105.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "Count Text"
+align = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -42.0
+margin_top = 1.29236
+margin_right = 42.0
+margin_bottom = 1.29236
+alignment = 1
+
+[node name="WinLabel" type="Label" parent="CanvasLayer/VBoxContainer"]
+margin_top = 285.0
+margin_right = 84.0
+margin_bottom = 314.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "Win Text"
+align = 1
