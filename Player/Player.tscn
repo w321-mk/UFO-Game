@@ -1,22 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://btu4pubib2phs"]
 
-[ext_resource path="res://Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://data/UFO.png" type="Texture" id=2]
+[ext_resource type="Script" path="res://Player/Player.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bs2aabk0in2eu" path="res://data/UFO.png" id="2"]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id="1"]
 radius = 210.0
 
 [node name="Player" type="RigidBody2D"]
-contacts_reported = 3
+max_contacts_reported = 3
 contact_monitor = true
-linear_damp = 0.0
-angular_damp = 0.0
-script = ExtResource( 1 )
+script = ExtResource("1")
 
-[node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.188, 0.188 )
-texture = ExtResource( 2 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.188, 0.188)
+texture = ExtResource("2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2( 0.188, 0.188 )
-shape = SubResource( 1 )
+scale = Vector2(0.188, 0.188)
+shape = SubResource("1")

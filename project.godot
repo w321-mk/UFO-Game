@@ -6,24 +6,20 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
-
-_global_script_classes=[  ]
-_global_script_class_icons={
-}
+config_version=5
 
 [application]
 
 config/name="UFO Game"
 config/description="Unity Example project ported to godot"
 run/main_scene="res://Main/Main.tscn"
-boot_splash/bg_color=Color( 0.101961, 0.101961, 0.101961, 1 )
+config/features=PackedStringArray("4.2")
+boot_splash/bg_color=Color(0.101961, 0.101961, 0.101961, 1)
 config/icon="res://icon.png"
 
 [display]
 
 window/stretch/mode="2d"
-window/stretch/aspect="keep"
 
 [gui]
 
@@ -31,5 +27,5 @@ theme/use_hidpi=true
 
 [rendering]
 
-environment/default_clear_color=Color( 0, 0, 0, 1 )
-environment/default_environment="res://default_env.tres"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+environment/defaults/default_environment="res://default_env.tres"

@@ -1,15 +1,16 @@
-extends Node
+extends Camera2D
 
-export (NodePath) var player
+@export var player : NodePath
+
 var Player
-var offset : Vector2
+var player_offset : Vector2
 
 func _ready():
 	if player == null:
 		Player = load("res://Player/Player.tscn")
 	else:
 		Player = get_node(player)
-	offset = $".".position - Player.position
+	player_offset = self.position - Player.position
 
 func _process(_delta):
-	$".".position = Player.position + offset
+	self.position = Player.position + player_offset
